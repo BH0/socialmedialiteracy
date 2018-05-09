@@ -1,0 +1,17 @@
+
+
+	@if (count($errors) > 0) 
+	<div class="errors">
+		<b>Errors:</b> 
+		<ul> 
+			@foreach($errors->all() as $error) 
+				<li>{{$error}}</li> 
+			@endforeach
+		</ul> 
+	</div> 
+	@endif 
+	@if (Session::has('message')) 
+		<div class="success"> 
+			{{Session::get('message')}}
+		</div> 
+	@endif 
